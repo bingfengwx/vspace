@@ -1,0 +1,12 @@
+server:
+  port: 8080
+
+tio:
+  websocket:
+    server:
+      port: 8088
+      heartbeat-timeout: 600000
+
+logging:
+  level:
+    root: debug
