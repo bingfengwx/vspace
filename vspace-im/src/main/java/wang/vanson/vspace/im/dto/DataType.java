@@ -15,13 +15,14 @@ public enum DataType {
     PRIVATE_MSG(21),
     USER_START(30);
 
-    private int value;
+    private int type;
 
     DataType(int i) {
-        this.value = i;
+        this.type = i;
     }
 
-    public int getValue() {
-        return value;
+    public int getType() {
+        return type;
     }
+
 }
