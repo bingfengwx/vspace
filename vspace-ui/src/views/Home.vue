@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <div class="main">
       <mu-flex justify-content="center" align-items="center" class="favicon">
         <h1>V - SPACE</h1>
       </mu-flex>
@@ -18,6 +19,7 @@
             </mu-flex>
         </div>
       </mu-flex>
+    </div>
   </div>
 </template>
 
@@ -38,21 +40,28 @@ export default {
 </script>
 
 <style scoped>
+  .home {
+    height: 100vh;
+    background: url(../assets/bg.jpg);
+    background-size: cover;
+    display: flex;
+    display: -webkit-flex;
+    align-items:center;
+    justify-content:center;
+  }
   .favicon {
     width: 100%;
     height: 56px;
-    margin-top: 120px;
     text-align: center;
   }
   .favicon h1 {
     font-size: 68px;
-    color: #2196f3;
+    color: #fff;
   }
   .entrance {
-    width: 600px; 
     background-color: #fff;
-    margin: 50px auto;
-    padding: 20px 60px;
+    margin: 50px 0 120px 0;
+    padding: 30px 80px;
   }
   .form-group {
     text-align: center;
