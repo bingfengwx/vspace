@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Space from '../views/Space.vue'
 
 Vue.use(VueRouter)
 
@@ -11,12 +12,13 @@ const routes = [
     component: Home
   },
   {
+    path: '/space',
+    redirect: '/'
+  },
+  {
     path: '/space/:spaceName',
     name: 'space',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "space" */ '../views/Space.vue'),
+    component: Space,
     props: true
   }
 ]
