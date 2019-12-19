@@ -180,6 +180,9 @@ export default {
     },
     updated: function() {
         this.scrollToBottom();
+    },
+    destroyed: function() {
+        this.socket.close();
     }
 }
 
