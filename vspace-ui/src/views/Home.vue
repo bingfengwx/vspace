@@ -7,11 +7,11 @@
       <mu-flex wrap="wrap" justify-content="center" align-items="center">
         <div class="entrance" v-elevation="12">
             <mu-flex justify-content="center" direction="column" align-items="center">
-              <mu-flex justify-content="center" align-items="start" class="form-group">
+              <!-- <mu-flex justify-content="center" align-items="start" class="form-group">
                 <mu-text-field v-model="nickname" placeholder="昵称"></mu-text-field>
-              </mu-flex>
+              </mu-flex> -->
               <mu-flex justify-content="center" align-items="start" class="form-group">
-                <mu-text-field v-model="space" placeholder="要去哪里"></mu-text-field>
+                <mu-text-field v-model="space" placeholder="要去哪里？"></mu-text-field>
               </mu-flex>
             </mu-flex>
             <mu-flex justify-content="center" align-item="center" class="launch-btn">
