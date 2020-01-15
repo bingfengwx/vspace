@@ -19,6 +19,6 @@ public class CommonHandle {
         String incrementUserJson = JSON.toJSONString(incrementUserDTO);
 
         Tio.sendToGroup(channelContext.getTioConfig(), spaceName,
-                WsResponse.fromText(incrementUserJson, CharsetUtil.UTF_8), ctx -> !ctx.userid.equals(userId));
+                WsResponse.fromText(incrementUserJson, CharsetUtil.UTF_8));
     }
 }

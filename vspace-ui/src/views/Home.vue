@@ -15,7 +15,7 @@
               </mu-flex>
             </mu-flex>
             <mu-flex justify-content="center" align-item="center" class="launch-btn">
-              <mu-button full-width color="primary">GO</mu-button>
+              <mu-button full-width color="primary" @click="go">GO</mu-button>
             </mu-flex>
         </div>
       </mu-flex>
@@ -34,6 +34,11 @@ export default {
     return {
       nickname: '',
       space: ''
+    }
+  },
+  methods: {
+    go: function() {
+      this.$router.push({name: 'space', params: {spaceName: this.space}});
     }
   }
 }

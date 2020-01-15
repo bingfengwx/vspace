@@ -11,6 +11,7 @@ import java.io.Serializable;
 @Setter
 @NoArgsConstructor
 public class JsonResult implements Serializable {
+    private static final long serialVersionUID = 1798247727907048983L;
     private String code;
     private String msg;
     private Object data;
