@@ -1,7 +1,7 @@
 <template>
     <div>
-        <mu-appbar class="header" color="primary">
-            V - SPACE
+        <mu-appbar class="header" color="primary" title="V - SPACE">
+            <div slot="right" style="margin-right: 50px">您好！{{user.username}}</div>
         </mu-appbar>
         <div class="wrapper">
             <mu-container :fluid="true" style="height: 100%">
@@ -76,16 +76,7 @@ export default {
             forSend: '',
             sideTab: 0,
             msgList: [],
-            privateMsg: [
-                {
-                    mid: '2',
-                    uid: '1',
-                    username: 'vanson',
-                    sendDate: '2019-12-12',
-                    sendTime: '15:39:23',
-                    content: '你好！'
-                },
-            ],
+            privateMsg: [],
             userList: []
         }
     },
@@ -166,6 +157,9 @@ export default {
                 this.userList.push(...msg.users)
             } else if(msg.type === 20) {
                 this.msgList.push(msg);
+                if (msg.from === this.user.uid || msg.to === this.user.uid) {
+                    this.privateMsg.push(msg);
+                }
             }
         },
         close: function () {
